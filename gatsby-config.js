@@ -1,7 +1,14 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://analogica.in",
+    titleTemplate: "Analogic Template",
+
     title: "Analogica",
+    description: "Courses",
+    author: "analogica",
+    authorSite: "",
+    image: "../images/AnalogicaIcon.png",
+    twitterUsername: "@analogica"
   },
   plugins: [
     "gatsby-plugin-image",
@@ -10,7 +17,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/AnalogicaIcon.png",
       },
     },
     "gatsby-plugin-sharp",
