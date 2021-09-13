@@ -4,7 +4,7 @@
   "private": true,
   "description": "Analogica",
   "keywords": [
-    "gatsby"
+    "analogica"
   ],
   "scripts": {
     "develop": "gatsby develop",

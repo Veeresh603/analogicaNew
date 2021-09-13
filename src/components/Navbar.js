@@ -61,8 +61,12 @@ export const NavStyles = styled.nav`
     grid-area: 1/2/2/11;
     z-index: 3;
     width: 100%;
-    display: flex;
+    
+    @media (max-width: 479px){
+      display: flex;
     align-items: center;
+    }
+   
     img {
       margin-left: 0px;
       width: 145px !important;
@@ -98,6 +102,7 @@ export const NavStyles = styled.nav`
     transition: 0.3s ease-in;
     list-style: none;
     padding-left: 0;
+    align-items: center;
     li {
       list-style: none;
       font-size: 1.25rem;

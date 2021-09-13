@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     --h6: 1rem;
     --footerMenuItem: 0.85rem;
     --para: 1rem;
-    --spacing: 1rem;
+    --spacing: "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" ;
 
     @media (min-width: 768px) {
       --h1: 2.6rem;
