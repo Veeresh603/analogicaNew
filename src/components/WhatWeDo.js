@@ -63,12 +63,12 @@ const InnerConatiner = styled.div`
     letter-spacing: 0.05em;
     margin: 10px 0;
     @media (max-width: 479px) {
-      font-size: 18px;
+      font-size: 22px;
       letter-spacing: 1.5px;
       line-height: 25px;
     }
     @media (max-width: 767px) {
-      font-size: 18px;
+      font-size: 22px;
       letter-spacing: 1.5px;
       line-height: 25px;
     }
