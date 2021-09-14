@@ -127,6 +127,10 @@ const Wrapper = styled.div`
     padding: 10px 0;
   }
   .our_work {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 15px;
     .description {
       width: 100%;
       display: flex;
