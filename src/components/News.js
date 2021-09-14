@@ -17,6 +17,9 @@ function News() {
 export default News;
 
 const Wrapper = styled.div`
+  @media (max-width: 479px) {
+    margin-top: 50px;
+  }
   h3 {
     margin: 0;
     font-size: 16px !important;
@@ -29,7 +32,7 @@ const Wrapper = styled.div`
     font-size: 13px !important;
     color: #fff;
   }
-  .accordion{
+  .accordion {
     margin-top: 21px;
   }
   .MuiAccordion-root.Mui-expanded {
