@@ -8,6 +8,8 @@ import LeftImage from "../components/LeftImage";
 import OurWork from "../components/OurWork";
 import TechnologyStackCarousel from "../components/TechnologyStackCarousel";
 import logo from "../images/AnalogicaIcon.png"
+import WhoWeAre from "../components/WhoareWe";
+import WhatWeAreThinking from "../components/WhatWeAreThinking";
 
 function Index() {
   const data = useStaticQuery(graphql`
@@ -49,6 +51,8 @@ function Index() {
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       />
       <TechnologyStackCarousel img={logo} title="technology stack" />
+      <WhoWeAre />
+      <WhatWeAreThinking />
     </Wrapper>
   );
 }

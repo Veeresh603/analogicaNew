@@ -98,7 +98,7 @@ const Wrapper = styled.div`
   img {
     width: 100%;
     @media (max-width: 479px) {
-      width: 80%;
+      width: 50%;
     }
   }
   .first:hover {

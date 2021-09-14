@@ -62,6 +62,9 @@ const Wrapper = styled.div`
       font-size: 22px;
       font-weight: var(--LightWeight);
       letter-spacing: 0.03em;
+      @media (max-width:479px){
+        font-size: 18px;
+      }
     }
     ul {
       margin: 0;
@@ -71,6 +74,9 @@ const Wrapper = styled.div`
         font-size: 18px;
         font-weight: var(--NormalWeight);
         padding: 5px 0;
+        @media (max-width:479px){
+        font-size: 16px;
+      }
       }
     }
   }

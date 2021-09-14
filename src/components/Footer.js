@@ -154,12 +154,24 @@ const FooterStyles = styled.footer`
   li {
     font-size: var(--footerMenuItem);
   }
-
+  /* svg{
+    width: 60%;
+    height: auto;
+  } */
+  .footer_logo{
+    padding-bottom: 20px;
+  }
   address {
     font-style: normal;
     margin-bottom: var(--spacing);
   }
-
+  .author_site{
+    @media (max-width: 479px){
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
   li {
     text-transform: capitalize;
     list-style: none;
@@ -205,7 +217,7 @@ const FooterStyles = styled.footer`
     }
 
     img {
-      max-width: 125px;
+      max-width: 200px;
       width: 100%;
     }
   }
@@ -221,8 +233,8 @@ const FooterStyles = styled.footer`
   }
 
   .footer-menu {
-    padding: 0;
-    width: 50%;
+    padding: 0 12px;
+    width: auto;
     margin-top: calc(var(--spacing) * 2);
     margin-bottom: 0;
 
@@ -263,6 +275,7 @@ const FooterStyles = styled.footer`
 
   .socials {
     display: flex;
+    flex-direction: column;
 
     li {
       margin-top: 0;
@@ -309,6 +322,7 @@ const FooterStyles = styled.footer`
       }
     }
   }
-`;
+`
+
 
 export default Footer;

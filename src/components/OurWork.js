@@ -142,6 +142,10 @@ const Wrapper = styled.div`
       }
       p {
         text-align: center;
+        font-size: 17.02px;
+        @media (max-width:479px){
+        font-size: 14px;
+      }
       }
     }
   }
