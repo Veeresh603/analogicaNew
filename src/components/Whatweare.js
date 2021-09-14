@@ -95,6 +95,7 @@ const Wrapper = styled.div`
   background-size: cover;
   @media (max-width: 479px) {
     margin-bottom: 20px;
+    padding-top: 70px
   }
   .section_right {
     width: 100%;
