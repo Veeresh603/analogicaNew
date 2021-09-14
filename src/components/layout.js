@@ -4,8 +4,7 @@ import Footer from "./Footer";
 import SEO from "../components/Seo/seo";
 import GlobalStyles from "../styles/GlobalStyles";
 import TypographyStyles from "../styles/TypographyStyles";
-import Logo from "../images/AnaLogo.png";
-import FLogo from "../images/analogo.png";
+import Logo from "../images/AnaLogoWhite.svg";
 
 
 
@@ -19,7 +18,7 @@ const Layout = ({ children }) => {
       <TypographyStyles />
       <Navbar Logo={Logo} />
       <div className="layout">{children}</div>
-      <Footer Logo={FLogo} />
+      <Footer Logo={Logo} />
     </>
   );
 };

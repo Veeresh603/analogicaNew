@@ -218,7 +218,7 @@ const FooterStyles = styled.footer`
 
     img {
       max-width: 200px;
-      width: 100%;
+      width: 180px;
     }
   }
 
