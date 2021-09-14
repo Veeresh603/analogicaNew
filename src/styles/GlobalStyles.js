@@ -11,7 +11,9 @@ const GlobalStyles = createGlobalStyle`
     --transSlow: 0.5s;
     --black: #111111;
     --charcoal: #3e3e3e;
-    --primaryColor: #00A4EF;
+    --primaryColor: #0011ff;
+    --redColor: #ff002b;
+    --greyColor: #f8f8f8;
     --headerColor: #0511F2;
     --h1: 2rem;
     --h2: 1.8rem;

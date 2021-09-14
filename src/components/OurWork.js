@@ -136,7 +136,7 @@ const Wrapper = styled.div`
       position: relative;
       .desc {
         width: 85%;
-        background: #dfdddd;
+        background: var(--greyColor);
         box-shadow: 0px 1.4185px 4.2555px rgba(0, 0, 0, 0.25);
         border-radius: 3.54625px;
         display: flex;

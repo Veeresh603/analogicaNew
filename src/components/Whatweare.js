@@ -81,7 +81,7 @@ function WhatWeAreThinking(props) {
 export default WhatWeAreThinking;
 
 const Wrapper = styled.div`
-  background: #dfdddd;
+  background: var(--greyColor);
   height: auto;
   /* background-size: 100% 1465px; */
   background-repeat: no-repeat;
@@ -185,7 +185,7 @@ const Wrapper = styled.div`
     h2 {
       font-size: 22px;
       font-weight: var(--NormalWeight);
-      color: var(--primaryColor);
+      color: #fff;
       @media (max-width: 479px) {
         font-size: 15px;
       }

@@ -69,7 +69,7 @@ export const NavStyles = styled.nav`
    
     img {
       margin-left: 0px;
-      width: 145px !important;
+      width: 180px !important;
       margin-top:9px;
       @media (min-width: 768px) {
         width: 100px;
@@ -103,7 +103,6 @@ export const NavStyles = styled.nav`
     list-style: none;
     padding-left: 0;
     align-items: center;
-    z-index: 99;
     li {
       list-style: none;
       font-size: 1.25rem;
@@ -185,6 +184,7 @@ export const NavStyles = styled.nav`
       position: relative;
       transform: translateX(0);
       transition: none;
+      z-index: 99;
       li {
         margin-left: 1rem;
       }
