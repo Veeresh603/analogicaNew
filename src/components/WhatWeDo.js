@@ -11,8 +11,7 @@ function WhatweDO() {
         <HeadingBorderAnimation>what we do</HeadingBorderAnimation>
         <h4>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
-          cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras
-          porta velit integer maecenas.
+          cursus nec nunc diam mi id odio.
         </h4>
         <LinkTo path="/whatwedo">
             Learn More

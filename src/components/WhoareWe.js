@@ -132,14 +132,9 @@ const Wrapper = styled.div`
       display: flex;
       align-items: flex-start;
       align-self: flex-start;
-      h2 {
-        font-size: 20px;
-        color: var(--primaryColor);
-        font-weight: 600;
-      }
+  
     }
     .text {
-      margin-top: -30px;
       width: 100%;
       height: auto;
 
@@ -200,21 +195,4 @@ const Wrapper = styled.div`
   }
 `;
 
-const LinkedTo = styled(Link)`
-  width: 150px;
-  padding: 18px 24px;
-  background-color: var(--primaryColor);
-  color: #fff;
-  border-radius: 6px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease,
-    background-color 0.25s ease;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
-  &:hover {
-    color: var(--primaryColor);
-    transform: translate3d(0px, -1px, 0px);
-    background-color: #fff;
-    border: 1px solid var(--black);
-    box-shadow: none;
-  }
-`;
+

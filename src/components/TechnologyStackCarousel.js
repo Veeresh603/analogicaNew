@@ -45,7 +45,10 @@ function TechnologyStackCarousel(props) {
 
   return (
     <Wrapper style={!props.style ? null : props.style}>
-          <HeadingBorderAnimation>{props.title}</HeadingBorderAnimation>
+      <div className="heading">
+      <HeadingBorderAnimation>{props.title}</HeadingBorderAnimation>
+
+      </div>
 
         <Slider {...settings}>
           <div className="first">
@@ -94,6 +97,9 @@ const Wrapper = styled.div`
     @media (max-width: 479px) {
       width: 100% !important;
     }
+  }
+  .heading{
+    padding: 10px 0;
   }
   img {
     width: 100%;

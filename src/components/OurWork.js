@@ -123,6 +123,9 @@ const Wrapper = styled.div`
       border-radius: 6px;
     }
   }
+  .heading{
+    padding: 10px 0;
+  }
   .our_work {
     .description {
       width: 100%;

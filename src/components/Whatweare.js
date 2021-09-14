@@ -81,7 +81,7 @@ function WhatWeAreThinking(props) {
 export default WhatWeAreThinking;
 
 const Wrapper = styled.div`
-  background: url("${box}");
+  background: #dfdddd;
   height: auto;
   /* background-size: 100% 1465px; */
   background-repeat: no-repeat;
@@ -122,7 +122,20 @@ const Wrapper = styled.div`
       height: 500px;
     }
   }
+  .middle_section_wrapper::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
 
+.middle_section_wrapper::-webkit-scrollbar-track-piece  {
+    background-color: transparent;
+}
+
+.middle_section_wrapper::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: var(--primaryColor);
+}
+  
   .middle_section {
     display: flex;
     flex-direction: column;
@@ -131,6 +144,8 @@ const Wrapper = styled.div`
     align-content: center;
     width: 100%;
     height: auto;
+    padding: 10px 0;
+
     padding-right: 2px;
     @media (max-width: 767px) {
       padding-right: 10px;

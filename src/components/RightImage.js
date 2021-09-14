@@ -58,12 +58,14 @@ const Wrapper = styled.div`
     @media (max-width: 767px) {
       grid-area: 2/1/3/3;
       padding-right: 0px;
+      margin-top: 15px
+
     }
     p {
       font-size: 22px;
       font-weight: var(--LightWeight);
       letter-spacing: 0.03em;
-
+      margin: 5px 0;
       @media (max-width: 479px) {
         font-size: 18px;
       }

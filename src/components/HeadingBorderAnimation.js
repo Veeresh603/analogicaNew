@@ -18,9 +18,13 @@ h2 {
     padding-top: 0px;
     color: var(--primaryColor);
     font-size: 24px;
-
+    margin: 5px 0;
     font-weight: var(--NormalWeight);
     transition: 1s ease-in-out;
+
+    @media (max-width: 479px){
+      font-size: 20px;
+    }
   }
 
   .borderLeftRight {
