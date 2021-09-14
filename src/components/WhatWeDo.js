@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
+import LinkTo from "./LinkTo";
 
 function WhatweDO() {
   return (
@@ -13,9 +14,10 @@ function WhatweDO() {
           cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras
           porta velit integer maecenas.
         </h4>
-        <LinkTo className="pushUpBtn" to="/whatwedo">
-          Learn More
-        </LinkTo>
+        <LinkTo path="/whatwedo">
+            Learn More
+          </LinkTo>
+        
       </InnerConatiner>
     </Container>
   );
@@ -78,23 +80,23 @@ const InnerConatiner = styled.div`
     }
   }
 `;
-const LinkTo = styled(Link)`
-  margin-top: 15px;
-  background-color: white;
-  color: var(--primaryColor);
-  border: 1px solid var(--primaryColor);
-  padding: 18px 24px;
+// const LinkTo = styled(Link)`
+//   margin-top: 15px;
+//   background-color: white;
+//   color: var(--primaryColor);
+//   border: 1px solid var(--primaryColor);
+//   padding: 18px 24px;
 
-  border-radius: 6px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease,
-    background-color 0.25s ease;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
+//   border-radius: 6px;
+//   transition: transform 0.25s ease, box-shadow 0.25s ease,
+//     background-color 0.25s ease;
+//   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+//   text-decoration: none;
 
-  &:hover {
-    transition-duration: 0.45s;
-    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    background-color: var(--primaryColor);
-    color: #fff;
-  }
-`;
+//   &:hover {
+//     transition-duration: 0.45s;
+//     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+//     background-color: var(--primaryColor);
+//     color: #fff;
+//   }
+// `;

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
 import { GatsbyImage } from "gatsby-plugin-image";
+import LinkTo from "./LinkTo";
 
 function LeftImage(props) {
   return (
@@ -17,6 +18,9 @@ function LeftImage(props) {
           <li>Artificial Intelligence</li>
           <li>Artificial Intelligence</li>
         </ul>
+        <div style={{display:"flex", marginTop: "1rem"}}>
+          <LinkTo path="/">Learn More</LinkTo>
+        </div>
       </div>
     </Wrapper>
   );

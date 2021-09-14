@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
 import { GatsbyImage } from "gatsby-plugin-image";
+import LinkTo from "./LinkTo";
 
 function RightImage(props) {
   return (
@@ -17,6 +18,9 @@ function RightImage(props) {
           <li>Artificial Intelligence</li>
           <li>Artificial Intelligence</li>
         </ul>
+        <div style={{display:"flex", marginTop: "1rem"}}>
+          <LinkTo path="/">Learn More</LinkTo>
+        </div>
       </div>
     </Wrapper>
   );
@@ -60,7 +64,7 @@ const Wrapper = styled.div`
       font-weight: var(--LightWeight);
       letter-spacing: 0.03em;
 
-      @media (max-width:479px){
+      @media (max-width: 479px) {
         font-size: 18px;
       }
     }
@@ -72,9 +76,9 @@ const Wrapper = styled.div`
         font-size: 18px;
         font-weight: var(--NormalWeight);
         padding: 5px 0;
-        @media (max-width:479px){
-        font-size: 16px;
-      }
+        @media (max-width: 479px) {
+          font-size: 16px;
+        }
       }
     }
   }

@@ -9,7 +9,7 @@ import OurWork from "../components/OurWork";
 import TechnologyStackCarousel from "../components/TechnologyStackCarousel";
 import logo from "../images/AnalogicaIcon.png"
 import WhoWeAre from "../components/WhoareWe";
-import WhatWeAreThinking from "../components/WhatWeAreThinking";
+import WhatWeAreThinking from "../components/Whatweare";
 
 function Index() {
   const data = useStaticQuery(graphql`

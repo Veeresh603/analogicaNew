@@ -103,6 +103,7 @@ export const NavStyles = styled.nav`
     list-style: none;
     padding-left: 0;
     align-items: center;
+    z-index: 99;
     li {
       list-style: none;
       font-size: 1.25rem;

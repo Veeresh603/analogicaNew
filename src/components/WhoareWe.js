@@ -4,6 +4,7 @@ import img01 from "../images/whoweareright.png";
 import img02 from "../images/whoweareleft.png";
 import { Link } from "gatsby";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
+import LinkTo from "./LinkTo";
 
 function WhoWeAre() {
   return (
@@ -16,9 +17,7 @@ function WhoWeAre() {
 
         <div className="section_middle">
           <div className="heading">
-            <HeadingBorderAnimation>
-              who we are
-            </HeadingBorderAnimation>
+            <HeadingBorderAnimation>who we are</HeadingBorderAnimation>
           </div>
           <div className="text">
             <h4>
@@ -34,9 +33,9 @@ function WhoWeAre() {
               in cursus nec nunc diam mi id odio. Amet morbi amet velit ut.{" "}
             </p>
           </div>
-          <div className="button">
-            <LinkedTo to="/whoweare">Get to know us</LinkedTo>
-          </div>
+          {/* <div className="button">
+            <LinkTo path="/whatwedo">Learn More</LinkTo>{" "}
+          </div> */}
         </div>
         <div className="section_left">
           <img className="left_image" src={img02} alt="" />
@@ -106,7 +105,7 @@ const Wrapper = styled.div`
     bottom: 0;
     margin-bottom: -170px;
     @media (max-width: 767px) {
-       display: none;
+      display: none;
     }
   }
   .section_middle {
@@ -166,6 +165,7 @@ const Wrapper = styled.div`
         font-size: 16px;
         font-family: var(--family);
         font-weight: var(--LightWeight);
+        margin: 0;
         @media (max-width: 479px) {
           font-size: 14px;
           margin-top: 0;
@@ -190,13 +190,13 @@ const Wrapper = styled.div`
       object-fit: contain;
     }
     @media (max-width: 479px) {
-    
       display: none;
     }
   }
   .button {
     width: 100%;
     margin-top: 25px;
+    display: flex;
   }
 `;
 

@@ -19,10 +19,7 @@ export const mainMenuItems = [
     path: "/services",
     title: "services",
   },
-  {
-    path: "/contact",
-    title: "contact",
-  },
+
 ]
 
 export const socialMenuItems = [
