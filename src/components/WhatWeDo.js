@@ -68,7 +68,7 @@ const InnerConatiner = styled.div`
       line-height: 25px;
     }
     @media (max-width: 767px) {
-      font-size: 22px;
+      font-size: 22px !important;
       letter-spacing: 1.5px;
       line-height: 25px;
     }
