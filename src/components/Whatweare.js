@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
 import img from "../images/traing pic 1.png";
-
 import box from "../images/box.png";
 import News from "./News";
 
 // import linkedin from "../../images/linkedin.svg"
+
 
 function WhatWeAreThinking(props) {
   return (
@@ -215,7 +215,7 @@ const Wrapper = styled.div`
   }
   .section_left {
     grid-area: 1/2/2/5;
-    margin-top: 100px;
+    margin-top: 238px;
     height: 711px;
     overflow-y: auto;
     scrollbar-color: var(--primaryColor) transparent;

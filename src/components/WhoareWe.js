@@ -5,14 +5,33 @@ import img02 from "../images/whoweareleft.png";
 import { Link } from "gatsby";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
 import LinkTo from "./LinkTo";
+import videos from "../images/testVideo.mp4";
+import rocket from "../images/rocket.jpg";
 
+<svg
+  width="371"
+  height="332"
+  viewBox="0 0 371 332"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M370.066 0.728027H0C0 63.2725 17.3897 157.983 94.23 225.888C171.07 293.794 290.505 337.873 370.066 331.32V0.728027Z"
+    fill="#DFDDDD"
+  />
+</svg>;
 function WhoWeAre() {
   return (
     <Wrapper>
       <div className="section">
         <div className="section_right">
-          <img className="right_image" src={img01} alt="" />
-          <div className="rectangle_box"></div>
+          <video className="bg__header" preload="auto" loop autoPlay muted>
+            <source src={videos} type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+          <div className="rectangle_box">
+            <img src={rocket} alt="" />
+          </div>
         </div>
 
         <div className="section_middle">
@@ -91,6 +110,10 @@ const Wrapper = styled.div`
       height: auto;
       object-fit: contain;
     }
+    .bg__header {
+      width: 100%;
+      clip-path: circle(60% at 70% 20%);
+    }
     @media (max-width: 767px) {
       height: auto;
       width: 50%;
@@ -104,6 +127,11 @@ const Wrapper = styled.div`
     border-radius: 5px;
     bottom: 0;
     margin-bottom: -170px;
+    display: block;
+
+    img{
+      width: 100%;
+    }
     @media (max-width: 767px) {
       display: none;
     }
@@ -132,7 +160,6 @@ const Wrapper = styled.div`
       display: flex;
       align-items: flex-start;
       align-self: flex-start;
-  
     }
     .text {
       width: 100%;
@@ -194,5 +221,3 @@ const Wrapper = styled.div`
     display: flex;
   }
 `;
-
-
