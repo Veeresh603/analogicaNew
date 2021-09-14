@@ -299,7 +299,7 @@ const Wrapper = styled.div`
     }
     .section_left {
       grid-area: 2/2/3/11;
-      margin-top: 0px;
+      margin-top: 50px;
     }
   }
 `;
