@@ -50,7 +50,7 @@ function WhatWeAreThinking(props) {
             <h2>{props.bottom.title}</h2>
             <div className="bottom_text">
               <h4>
-                {props.bottom.decription}
+                {props.bottom.description}
               </h4>
             </div>
           </div>
