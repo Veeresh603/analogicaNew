@@ -3,7 +3,10 @@ import styled from "styled-components";
 import videos from "../images/video(4).mp4";
 // import Fade from "react-reveal/Fade"
 
-function banner() {
+
+function Banner() {
+
+
   return (
     <Wrapper>
       <div className="banner_section">
@@ -11,18 +14,15 @@ function banner() {
           <source src={videos} type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
-        <div
-          className="banner_heading"
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-        >
-          <h1>
+        <div className="banner_heading">
+          <h1 className="wow fadeInUp" data-wow-delay=".2s">
             RIGHT
             <br></br> INSIGHTS
           </h1>
 
-          <h2>CAN INSPIRE BRILLIANT IDEAS</h2>
+          <h2 className="wow fadeInUp" data-wow-delay=".4s">
+            CAN INSPIRE BRILLIANT IDEAS
+          </h2>
         </div>
       </div>
       {/* <div className="section">
@@ -46,7 +46,7 @@ function banner() {
   );
 }
 
-export default banner;
+export default Banner;
 
 const Wrapper = styled.div`
   position: relative;

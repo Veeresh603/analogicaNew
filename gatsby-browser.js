@@ -13,3 +13,4 @@ import "@fontsource/poppins/700.css";
 export function wrapPageElement({ element, props }) {
   return <Layout {...props}>{element}</Layout>;
 }
+

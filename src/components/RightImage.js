@@ -8,8 +8,8 @@ function RightImage(props) {
   return (
     <Wrapper>
       <div className="right_image">
-        <GatsbyImage image={props.image} alt="" />
-      </div>
+        <GatsbyImage className="wow fadeInDown img-thumbnail" data-wow-delay=".6s" image={props.image} alt="" />
+      </div> 
       <div className="left_description">
         <HeadingBorderAnimation>{props.title}</HeadingBorderAnimation>
         <p>{props.desc}</p>
