@@ -112,7 +112,7 @@ const Wrapper = styled.div`
     }
     .bg__header {
       width: 100%;
-      clip-path: circle(60% at 70% 20%);
+      clip-path: circle(86% at 12% 8%);
     }
     @media (max-width: 767px) {
       height: auto;
