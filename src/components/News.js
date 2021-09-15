@@ -41,4 +41,7 @@ const Wrapper = styled.div`
   .MuiPaper-root {
     background-color: transparent !important;
   }
+  img{
+    width: 100%;
+  }
 `;

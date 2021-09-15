@@ -47,11 +47,10 @@ function WhatWeAreThinking(props) {
           className="bottom_section_section"
         >
           <div className="bottom">
-            <h2>empowering constituents</h2>
+            <h2>{props.bottom.title}</h2>
             <div className="bottom_text">
               <h4>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim
-                in cursus nec nunc diam mi id odio. Amet morbi amet velit ut.
+                {props.bottom.decription}
               </h4>
             </div>
           </div>
@@ -222,6 +221,9 @@ const Wrapper = styled.div`
       width: auto;
       height: 302px;
       border-radius: 6px;
+      @media (max-width: 479px) {
+      height: auto;
+    }
     }
     @media (max-width: 479px) {
       width: 100%;

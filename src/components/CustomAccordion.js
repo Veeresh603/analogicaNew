@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
-import Typography from "@material-ui/core/Typography";
+import ReactMarkdown from 'react-markdown'
 
 const Accordion = withStyles({
   root: {
@@ -69,9 +69,9 @@ export default function CustomizedAccordions(props) {
             <h3>{d.title}</h3>
           </AccordionSummary>
           <AccordionDetails>
-            <h4>
+            <ReactMarkdown>
              {d.description}
-            </h4>
+            </ReactMarkdown>
           </AccordionDetails>
         </Accordion>
       ))}

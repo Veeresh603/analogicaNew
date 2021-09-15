@@ -14,7 +14,7 @@ import LeftOrRIght  from "../components/LeftOrRIght";
 
 function Index({data}) {
 
-  const {what_we_do, technology_stacks, our_work, grid_left_or_right, who_are_we,what_we_are, news } = data.strapiHome
+  const {what_we_do, technology_stacks, our_work, grid_left_or_right, who_are_we,what_we_are, news, empowering_bottom_section } = data.strapiHome
 
   return (
     <Wrapper>
@@ -41,7 +41,7 @@ function Index({data}) {
       />
       <TechnologyStackCarousel data={technology_stacks} />
       <WhoWeAre data={who_are_we}/>
-      <WhatWeAreThinking data={what_we_are} news={news} />
+      <WhatWeAreThinking data={what_we_are} news={news} bottom={empowering_bottom_section}/>
     </Wrapper>
   );
 }
@@ -154,6 +154,10 @@ export const query = graphql`
           id
           title
         }
+      }
+      empowering_bottom_section{
+        title
+        description
       }
     }
   }
