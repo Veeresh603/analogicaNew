@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function HeadingBorderAnimation(props) {
     return (
         <Wrapper>
-           <h2 className="borderLeftRight wow fadeInUp center" data-wow-delay=".5s">
+           <h2 className="borderLeftRight wow fadeInUp" data-wow-delay={props.delay}>
                 {props.children}
            </h2>
         </Wrapper>

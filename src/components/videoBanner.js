@@ -3,10 +3,7 @@ import styled from "styled-components";
 import videos from "../images/video(4).mp4";
 // import Fade from "react-reveal/Fade"
 
-
 function Banner() {
-
-
   return (
     <Wrapper>
       <div className="banner_section">
@@ -15,14 +12,12 @@ function Banner() {
           Your browser does not support HTML5 video.
         </video>
         <div className="banner_heading">
-          <h1 className="wow fadeInUp" data-wow-delay=".2s">
+          <h1>
             RIGHT
             <br></br> INSIGHTS
           </h1>
 
-          <h2 className="wow fadeInUp" data-wow-delay=".4s">
-            CAN INSPIRE BRILLIANT IDEAS
-          </h2>
+          <h2>CAN INSPIRE BRILLIANT IDEAS</h2>
         </div>
       </div>
       {/* <div className="section">

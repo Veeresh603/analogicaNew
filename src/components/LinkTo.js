@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 function LinkTo(props) {
   return (
     <>
-      <Linked to={props.path}>{props.children}</Linked>
+      <Linked className="wow fadeInUp" data-wow-delay={props.delay} to={props.path}>{props.children}</Linked>
     </>
   );
 }

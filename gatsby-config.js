@@ -21,12 +21,12 @@ module.exports = {
         icon: "src/images/AnalogicaIcon.png",
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-load-script',
-    //   options: {
-    //     src: '/wow.min.js', // Change to the script filename
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: '/wow.min.js', // Change to the script filename
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

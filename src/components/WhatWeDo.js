@@ -8,12 +8,12 @@ function WhatweDO() {
   return (
     <Container>
       <InnerConatiner>
-        <HeadingBorderAnimation>what we do</HeadingBorderAnimation>
-        <h4>
+        <HeadingBorderAnimation delay=".2s">what we do</HeadingBorderAnimation>
+        <h4 className="wow fadeInUp" data-wow-delay=".4s">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
           cursus nec nunc diam mi id odio.
         </h4>
-        <LinkTo path="/whatwedo">
+        <LinkTo path="/whatwedo" delay=".4s">
             Learn More
           </LinkTo>
         
