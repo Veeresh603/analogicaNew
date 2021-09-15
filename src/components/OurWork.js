@@ -34,7 +34,7 @@ function OurWork(props) {
           ]}
         >
           <Carousel.Item >
-            <div className="our_work wow zoomIn" data-wow-delay=".6s" >
+            <div className="our_work wow zoomIn" data-wow-delay=".3s" >
               <div className="image_wrapper">
                 <GatsbyImage
                   className="image_wrapper"
@@ -50,7 +50,7 @@ function OurWork(props) {
             </div>
           </Carousel.Item>
           <Carousel.Item >
-            <div className="our_work">
+            <div className="our_work wow zoomIn" data-wow-delay=".3s">
               <div className="image_wrapper">
                 <GatsbyImage
                   className="image_wrapper"
@@ -66,7 +66,7 @@ function OurWork(props) {
             </div>
           </Carousel.Item>
           <Carousel.Item >
-            <div className="our_work">
+            <div className="our_work wow zoomIn" data-wow-delay=".3s">
               <div className="image_wrapper">
                 <GatsbyImage
                   className="image_wrapper"
