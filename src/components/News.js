@@ -44,4 +44,8 @@ const Wrapper = styled.div`
   img{
     width: 100%;
   }
+  .MuiAccordionDetails-root{
+    display: flex;
+    flex-direction: column !important;
+  }
 `;
