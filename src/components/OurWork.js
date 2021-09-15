@@ -8,7 +8,7 @@ function OurWork(props) {
   return (
     <Wrapper>
       <div className="heading">
-        <HeadingBorderAnimation>{props.title}</HeadingBorderAnimation>
+        <HeadingBorderAnimation>{props.data.title}</HeadingBorderAnimation>
       </div>
 
       <div className="our_work_wrapper">
@@ -16,7 +16,6 @@ function OurWork(props) {
           cols={3}
           rows={1}
           gap={60}
-        
           responsiveLayout={[
             {
               breakpoint: 1200,
@@ -27,76 +26,30 @@ function OurWork(props) {
               cols: 2,
             },
             {
-                breakpoint: 479,
-                cols: 1,
-                gap: 15,
-            }
+              breakpoint: 479,
+              cols: 1,
+              gap: 15,
+            },
           ]}
         >
-          <Carousel.Item >
-            <div className="our_work wow zoomIn" data-wow-delay=".3s" >
-              <div className="image_wrapper">
-                <GatsbyImage
-                  className="image_wrapper"
-                  image={props.image}
-                  alt=""
-                />
-              </div>
-              <div className="description">
-                <div className="desc">
-                  <p>{props.desc}</p>
+          {props.data.our_works.map((d) => (
+            <Carousel.Item>
+              <div className="our_work" key={d.id}>
+                <div className="image_wrapper">
+                  <GatsbyImage
+                    className="image_wrapper"
+                    image={d.media.localFile.childImageSharp.gatsbyImageData}
+                    alt=""
+                  />
+                </div>
+                <div className="description">
+                  <div className="desc">
+                    <p>{d.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item >
-            <div className="our_work wow zoomIn" data-wow-delay=".3s">
-              <div className="image_wrapper">
-                <GatsbyImage
-                  className="image_wrapper"
-                  image={props.image}
-                  alt=""
-                />
-              </div>
-              <div className="description">
-                <div className="desc">
-                  <p>{props.desc}</p>
-                </div>
-              </div>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item >
-            <div className="our_work wow zoomIn" data-wow-delay=".3s">
-              <div className="image_wrapper">
-                <GatsbyImage
-                  className="image_wrapper"
-                  image={props.image}
-                  alt=""
-                />
-              </div>
-              <div className="description">
-                <div className="desc">
-                  <p>{props.desc}</p>
-                </div>
-              </div>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item >
-            <div className="our_work">
-              <div className="image_wrapper">
-                <GatsbyImage
-                  className="image_wrapper"
-                  image={props.image}
-                  alt=""
-                />
-              </div>
-              <div className="description">
-                <div className="desc">
-                  <p>{props.desc}</p>
-                </div>
-              </div>
-            </div>
-          </Carousel.Item>
+            </Carousel.Item>
+          ))}
         </Carousel>
       </div>
     </Wrapper>
@@ -123,7 +76,7 @@ const Wrapper = styled.div`
       border-radius: 6px;
     }
   }
-  .heading{
+  .heading {
     padding: 10px 0;
   }
   .our_work {
@@ -150,9 +103,9 @@ const Wrapper = styled.div`
       p {
         text-align: center;
         font-size: 17.02px;
-        @media (max-width:479px){
-        font-size: 14px;
-      }
+        @media (max-width: 479px) {
+          font-size: 14px;
+        }
       }
     }
   }

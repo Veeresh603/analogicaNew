@@ -4,17 +4,16 @@ import { Link } from "gatsby";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
 import LinkTo from "./LinkTo";
 
-function WhatweDO() {
+function WhatweDO(props) {
   return (
     <Container>
       <InnerConatiner>
-        <HeadingBorderAnimation delay=".2s">what we do</HeadingBorderAnimation>
+        <HeadingBorderAnimation delay=".2s">{props.data.title}</HeadingBorderAnimation>
         <h4 className="wow fadeInUp" data-wow-delay=".4s">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
-          cursus nec nunc diam mi id odio.
+         {props.data.description}
         </h4>
-        <LinkTo path="/whatwedo" delay=".4s">
-            Learn More
+        <LinkTo path={props.data.button.link_or_slug} delay=".4s">
+            {props.data.button.label}
           </LinkTo>
         
       </InnerConatiner>

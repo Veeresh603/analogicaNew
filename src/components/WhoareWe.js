@@ -20,36 +20,32 @@ import rocket from "../images/rocket.jpg";
     fill="#DFDDDD"
   />
 </svg>;
-function WhoWeAre() {
+function WhoWeAre(props) {
   return (
     <Wrapper>
       <div className="section">
         <div className="section_right">
           <video className="bg__header" preload="auto" loop autoPlay muted>
-            <source src={videos} type="video/mp4" />
+            <source src={props.data.left_video.localFile.publicURL} type="video/mp4" />
             Your browser does not support HTML5 video.
           </video>
           <div className="rectangle_box">
-            <img src={rocket} alt="" />
+            <img src={props.data.left_bottom_imge.url} alt="" />
           </div>
         </div>
 
         <div className="section_middle">
           <div className="heading">
-            <HeadingBorderAnimation>who we are</HeadingBorderAnimation>
+            <HeadingBorderAnimation>{props.data.title}</HeadingBorderAnimation>
           </div>
           <div className="text">
             <h4>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim
-              in cursus nec nunc diam mi id odio. Amet morbi amet velit ut.{" "}
+             {props.data.description}
             </h4>
           </div>
           <div className="para">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim
-              in cursus nec nunc diam mi id odio. Amet morbi amet velit ut.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim
-              in cursus nec nunc diam mi id odio. Amet morbi amet velit ut.{" "}
+               {props.data.anaotherDescription}
             </p>
           </div>
           {/* <div className="button">
@@ -57,7 +53,7 @@ function WhoWeAre() {
           </div> */}
         </div>
         <div className="section_left">
-          <img className="left_image" src={img02} alt="" />
+          <img className="left_image" src={props.data.right_image.url} alt="" />
         </div>
       </div>
     </Wrapper>

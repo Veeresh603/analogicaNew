@@ -1,3 +1,10 @@
+const path = require(`path`)
+
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://analogica.in",
@@ -21,12 +28,22 @@ module.exports = {
         icon: "src/images/AnalogicaIcon.png",
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-load-script',
+    //   options: {
+    //     src: '/wow.min.js', // Change to the script filename
+    //   },
+    // },
     {
-      resolve: 'gatsby-plugin-load-script',
-      options: {
-        src: '/wow.min.js', // Change to the script filename
-      },
+    resolve: `gatsby-source-strapi`,
+    options: {
+      apiURL: `http://analogicadb.herokuapp.com`,
+      queryLimit: 1000, // Defaults to 100,
+      collectionTypes: [],
+      singleTypes: [`home`],
+  
     },
+  },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

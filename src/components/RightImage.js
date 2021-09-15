@@ -3,23 +3,18 @@ import styled from "styled-components";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
 import { GatsbyImage } from "gatsby-plugin-image";
 import LinkTo from "./LinkTo";
-
+import ReactMarkdown from 'react-markdown'
 function RightImage(props) {
   return (
     <Wrapper>
-      <div className="right_image">
-        <GatsbyImage className="wow fadeInDown img-thumbnail" data-wow-delay=".6s" image={props.image} alt="" />
+      <div className="right_image" key={props.key}>
+        <GatsbyImage image={props.data.media.localFile.childImageSharp.gatsbyImageData} alt="" />
       </div> 
       <div className="left_description">
-        <HeadingBorderAnimation>{props.title}</HeadingBorderAnimation>
-        <p>{props.desc}</p>
-        <ul>
-          <li>Artificial Intelligence</li>
-          <li>Artificial Intelligence</li>
-          <li>Artificial Intelligence</li>
-        </ul>
+        <HeadingBorderAnimation>{props.data.title}</HeadingBorderAnimation>
+          <ReactMarkdown>{props.data.description}</ReactMarkdown>
         <div style={{display:"flex", marginTop: "1rem"}}>
-          <LinkTo path="/">Learn More</LinkTo>
+          <LinkTo path={props.data.button.link_or_slug}>{props.data.button.label}</LinkTo>
         </div>
       </div>
     </Wrapper>

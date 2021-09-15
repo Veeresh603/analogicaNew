@@ -3,12 +3,12 @@ import styled from "styled-components";
 import CustomizedAccordions from "./CustomAccordion";
 import HeadingBorderAnimation from "./HeadingBorderAnimation";
 
-function News() {
+function News(props) {
   return (
     <Wrapper>
-      <HeadingBorderAnimation>news</HeadingBorderAnimation>
+      <HeadingBorderAnimation>{props.news.title}</HeadingBorderAnimation>
       <div className="accordion">
-        <CustomizedAccordions />
+        <CustomizedAccordions news={props.news} />
       </div>
     </Wrapper>
   );

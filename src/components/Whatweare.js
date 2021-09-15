@@ -4,47 +4,35 @@ import HeadingBorderAnimation from "./HeadingBorderAnimation";
 import img from "../images/traing pic 1.png";
 import box from "../images/box.png";
 import News from "./News";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // import linkedin from "../../images/linkedin.svg"
-
 
 function WhatWeAreThinking(props) {
   return (
     <Wrapper>
       <div className="section_right">
         <div className="uppersection">
-          <HeadingBorderAnimation>what we're thinking</HeadingBorderAnimation>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
-            cursus nec nunc diam mi id odio. Amet morbi amet velit ut.{" "}
-          </p>
+          <HeadingBorderAnimation>{props.data.title}</HeadingBorderAnimation>
+          <p>{props.data.description}</p>
         </div>
 
         <div className="middle_section_wrapper">
-          <div className="middle_section">
-            <div className="rectangle_box">
-              <img src={img} alt="" />
+          {props.data.image_with_description.map((d) => (
+            <div className="middle_section" key={d.id}>
+              <div className="rectangle_box">
+                <GatsbyImage image={d.media.localFile.childImageSharp.gatsbyImageData} alt="" />
+              </div>
+              <div className="text">
+                <h4>
+                  {d.description}
+                </h4>
+              </div>
             </div>
-            <div className="text">
-              <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-            </div>
-          </div>
-          <div className="middle_section">
-            <div className="rectangle_box">
-              <img src={img} alt="" />
-            </div>
-            <div className="text">
-              <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-            </div>
-          </div>
-          <div className="middle_section">
-            <div className="rectangle_box">
-              <img src={img} alt="" />
-            </div>
-            <div className="text">
-              <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-            </div>
-          </div>
+          ))}
+       
+       
+      
         </div>
       </div>
       <div className="bottom_section">
@@ -71,7 +59,7 @@ function WhatWeAreThinking(props) {
       </div>
       <div className="section_left">
         <div className="section_left_column">
-          <News />
+          <News news={props.news} />
         </div>
       </div>
     </Wrapper>
@@ -95,7 +83,7 @@ const Wrapper = styled.div`
   background-size: cover;
   @media (max-width: 479px) {
     margin-bottom: 20px;
-    padding-top: 70px
+    padding-top: 70px;
   }
   .section_right {
     width: 100%;
@@ -126,17 +114,17 @@ const Wrapper = styled.div`
   .middle_section_wrapper::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-}
+  }
 
-.middle_section_wrapper::-webkit-scrollbar-track-piece  {
+  .middle_section_wrapper::-webkit-scrollbar-track-piece {
     background-color: transparent;
-}
+  }
 
-.middle_section_wrapper::-webkit-scrollbar-thumb:vertical {
+  .middle_section_wrapper::-webkit-scrollbar-thumb:vertical {
     height: 30px;
     background-color: var(--primaryColor);
-}
-  
+  }
+
   .middle_section {
     display: flex;
     flex-direction: column;
@@ -230,6 +218,11 @@ const Wrapper = styled.div`
     background-color: #000000;
     border-radius: 5px;
     display: block;
+    .gatsby-image-wrapper {
+      width: auto;
+      height: 302px;
+      border-radius: 6px;
+    }
     @media (max-width: 479px) {
       width: 100%;
       height: auto;
@@ -248,6 +241,7 @@ const Wrapper = styled.div`
     height: auto;
     display: flex;
     justify-content: flex-end;
+    z-index:1;
     @media (max-width: 479px) {
       width: 90%;
     }

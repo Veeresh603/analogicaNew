@@ -1,10 +1,16 @@
 import React from 'react'
+import LeftImage from './LeftImage'
+import RightImage from './RightImage'
 
-function LeftOrRIght() {
+function LeftOrRIght(props) {
     return (
-        <div>
-            
-        </div>
+        <>
+           {props.data.map(d => {
+               return(
+                   d.left_image_or_right_image ? <RightImage data={d} key={d.id}/> : <LeftImage data={d} key={d.id}/>
+               )
+           })} 
+        </>
     )
 }
 

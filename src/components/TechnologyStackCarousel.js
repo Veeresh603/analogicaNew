@@ -46,30 +46,16 @@ function TechnologyStackCarousel(props) {
   return (
     <Wrapper style={!props.style ? null : props.style}>
       <div className="heading">
-      <HeadingBorderAnimation>{props.title}</HeadingBorderAnimation>
-
+        <HeadingBorderAnimation>{props.data.title}</HeadingBorderAnimation>
       </div>
 
-        <Slider {...settings}>
-          <div className="first">
-            <img src={props.img} alt="technology stack" />
+      <Slider {...settings}>
+        {props.data.logos.map((d) => (
+          <div className="first" key={d.id}>
+            <img src={d.medias.url} alt="technology stack" />
           </div>
-          <div className="first">
-            <img src={props.img} alt="technology stack" />
-          </div>
-          <div className="first">
-            <img src={props.img} alt="technology stack" />
-          </div>
-          <div className="first">
-            <img src={props.img} alt="technology stack" />
-          </div>
-          <div className="first">
-            <img src={props.img} alt="technology stack" />
-          </div>
-          <div className="first">
-            <img src={props.img} alt="technology stack" />
-          </div>
-        </Slider>
+        ))}
+      </Slider>
     </Wrapper>
   );
 }
@@ -98,7 +84,7 @@ const Wrapper = styled.div`
       width: 100% !important;
     }
   }
-  .heading{
+  .heading {
     padding: 10px 0;
   }
   img {
@@ -169,8 +155,6 @@ const Wrapper = styled.div`
       justify-content: center;
     }
   }
-
-
 
   .slick-slide img {
     margin: auto;
