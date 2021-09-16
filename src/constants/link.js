@@ -1,7 +1,7 @@
 export default [
  
     {
-      path: "/whatwedo",
+      path: "/what-we-do",
       text: "what we do",
     },
     {

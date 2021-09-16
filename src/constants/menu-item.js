@@ -8,7 +8,7 @@ export const mainMenuItems = [
 
  
   {
-    path: "/whatwedo",
+    path: "/what-we-do",
     title: "what we do",
   },
   {

@@ -14,11 +14,11 @@ import LeftOrRIght  from "../components/LeftOrRIght";
 
 function Index({data}) {
 
-  const {what_we_do, technology_stacks, our_work, grid_left_or_right, who_are_we,what_we_are, news, empowering_bottom_section } = data.strapiHome
+  const {what_we_do, technology_stacks, our_work, grid_left_or_right, who_are_we,what_we_are, news, empowering_bottom_section, video_banner } = data.strapiHome
 
   return (
     <Wrapper>
-      <VideoBanner />
+      <VideoBanner data={video_banner} />
       <WhatweDO data={what_we_do}/>
       <LeftOrRIght data={grid_left_or_right} />
       {/* <LeftImage
@@ -158,6 +158,17 @@ export const query = graphql`
       empowering_bottom_section{
         title
         description
+      }
+      video_banner {
+        short_description
+        second_title
+        first_title
+        banner_video {
+          localFile {
+            publicURL
+          }
+          url
+        }
       }
     }
   }

@@ -3,21 +3,20 @@ import styled from "styled-components";
 import videos from "../images/video(4).mp4";
 // import Fade from "react-reveal/Fade"
 
-function Banner() {
+function Banner(props) {
   return (
     <Wrapper>
       <div className="banner_section">
         <video className="bg__header" preload="auto" loop autoPlay muted>
-          <source src={videos} type="video/mp4" />
+          <source src={props.data.banner_video.localFile.publicURL} type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
         <div className="banner_heading">
-          <h1>
-            RIGHT
-            <br></br> INSIGHTS
-          </h1>
-
-          <h2>CAN INSPIRE BRILLIANT IDEAS</h2>
+          <div className="text_border">
+            <h1>{props.data.first_title}</h1>
+            <h1>{props.data.second_title}</h1>
+            <h2>{props.data.short_description}</h2>
+          </div>
         </div>
       </div>
       {/* <div className="section">
@@ -71,12 +70,18 @@ const Wrapper = styled.div`
     flex-direction: column;
     place-content: center;
 
+    .text_border{
+       border-left: 4px solid var(--primaryColor)
+    }
+
     h1 {
       font-size: 72px;
       font-weight: var(--NormalWeight);
       border-left: 4px solid var(--primaryColor);
       color: white;
       letter-spacing: 0.05em;
+      margin:0;
+      text-transform: uppercase;
       @media (max-width: 479px) {
         font-size: 35px;
       }
@@ -91,7 +96,10 @@ const Wrapper = styled.div`
       background-color: var(--primaryColor);
       padding: 10px 10px;
       letter-spacing: 2px;
-      margin-top: -50px;
+      text-transform: uppercase;
+
+      margin:0;
+      /* margin-top: -50px; */
       color: #f8f8f8;
       @media (max-width: 479px) {
         font-size: 12px;

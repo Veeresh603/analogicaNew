@@ -57,6 +57,9 @@ const Wrapper = styled.div`
   .left_description {
     grid-area: 1/2/2/3;
     padding-left: 100px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
     @media (max-width: 767px) {
       grid-area: 2/1/3/3;
       padding-left: 0px;
