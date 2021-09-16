@@ -103,7 +103,7 @@ const Wrapper = styled.div`
       color: #f8f8f8;
       @media (max-width: 479px) {
         font-size: 12px;
-        margin-top: -30px;
+        margin-top: -2px;
         width: 100%;
       }
       @media (max-width: 767px) {
